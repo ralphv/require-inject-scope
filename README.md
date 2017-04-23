@@ -13,10 +13,10 @@
 
 ## What is it
 
-The built in require of Node.js does not have a way to allow you to inject scoped variables. 
-The variables module, exports, __dirname, __filename... are available in the context of a required file but there is no easy way to provide your own variables. 
+The built in `require` of Node.js does not have a way to allow you to inject scoped variables. 
+The variables `module`, `exports`, `__dirname`, `__filename`... are available in the context of a required file but there is no easy way to provide your own variables. 
 
-Many developers will revert to using either globally defined variables or using singleton variables like globals, but neither of these are best practices.
+Many developers will revert to using either globally defined variables or using singleton variables like `globals`, but neither of these are best practices.
 
 This library allows you to inject your own variables to the context of the required file.
 
@@ -34,7 +34,7 @@ require("require-inject-scope");
 
 require will work normally as expected.
 
-When you need to inject variables into a scope, instead of calling require with one parameter which 
+When you need to inject variables into a scope, instead of calling `require` with one parameter which 
 is the `path`, you call it using an array with exactly two elements. 
 The first element is the standard `path` and the second element will be an object having properties as variable names to inject and their values.
 
