@@ -46,7 +46,7 @@ example:
 require(["./sample.js", {"$config":configObject, "$helper": helperObject}]);
 ```
 
-The file sample.js will have the two variables `$config` and `$helper` defined in it's scope similar to the standard available variables.
+The file sample.js will have the two variables `$config` and `$helper` defined in its scope similar to the standard available variables.
 
 ### License
 
