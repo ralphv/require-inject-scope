@@ -1,0 +1,35 @@
+{
+  "name": "require-inject-scope",
+  "version": "1.0.0",
+  "description": "Inject scoped variables when requiring a file in Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt test",
+    "cover": "grunt cover",
+    "ci": "grunt cover; grunt coveralls"
+  },
+  "keywords": [
+    "require",
+    "scope",
+    "inject",
+    "variables"
+  ],
+  "author": "Ralph Varjabedian",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ralphv/require-inject-scope.git"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "coveralls": "^2.11.16",
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "*",
+    "grunt-coveralls": "^1.0.1",
+    "grunt-mocha-test": "*",
+    "grunt-shell": "*",
+    "mocha": "^3.2.0",
+    "mocha-lcov-reporter": "^1.2.0",
+    "should": "*"
+  }
+}
