@@ -15,7 +15,8 @@
 
 The built in require of Node.js does not have a way to allow you to inject scoped variables. 
 The variables module, exports, __dirname, __filename... are available in the context of a required file but there is no easy way to provide your own variables. 
-Many developers will revert to using either globally defined variables or using singleton variables like globals, but neither of these are best practises.
+
+Many developers will revert to using either globally defined variables or using singleton variables like globals, but neither of these are best practices.
 
 This library allows you to inject your own variables to the context of the required file.
 
@@ -25,15 +26,19 @@ This library allows you to inject your own variables to the context of the requi
 
 ## Usage
 
-require this library as early as possible in your own code, that's it.
+require this library as early as possible in your own code.
+
+```javascript
+require("require-inject-scope");
+```
 
 require will work normally as expected.
 
 When you need to inject variables into a scope, instead of calling require with one parameter which 
-is the filename, you call it using an array with exactly two elements. 
-The first element is the standard filename and the second element will be an object having properties as variable names to inject and their values.
+is the `path`, you call it using an array with exactly two elements. 
+The first element is the standard `path` and the second element will be an object having properties as variable names to inject and their values.
 
-This is most useful when you are creating a plugin architecture where you want to provide your plugins a list of defined variables without requiring your plugins to require them manually.
+This is most useful when creating a plugin architecture where you want to provide the plugins a list of defined variables without requiring your plugins to require them manually.
 
 example:
 
@@ -41,7 +46,7 @@ example:
 require(["./sample.js", {"$config":configObject, "$helper": helperObject}]);
 ```
 
-The file sample.js will have the two variables $config and $helper defined in it similar to the standard available variables.
+The file sample.js will have the two variables `$config` and `$helper` defined in it's scope similar to the standard available variables.
 
 ### License
 
